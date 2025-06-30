@@ -1,5 +1,5 @@
-# Stage 1: Build với Maven và JDK 17 (Amazon Corretto)
-FROM maven:amazoncorretto-17 AS build
+# Stage 1: Build với Maven
+FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
